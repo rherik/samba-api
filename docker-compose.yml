@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - ./01-base-create-sambadb.sql:/docker-entrypoint-initdb.d/01-base-create-sambadb.sql
+      - ./02-base-insert-sambadb.sql:/docker-entrypoint-initdb.d/02-base-insert-sambadb.sql
+    
+    environment:
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5433:5432"
+  samba-api:
+    
