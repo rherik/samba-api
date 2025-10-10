@@ -20,7 +20,7 @@ Habilitar versão do python
 
 ativar ambiente virtual
 - poetry shell
-
+- poetry install
 
 ## Com o arquivo pyproject.toml configurado
 - task run
