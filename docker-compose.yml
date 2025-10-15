@@ -10,18 +10,18 @@ services:
       POSTGRES_PASSWORD: 123
     ports:
       - "5433:5432"
-  samba-api:
-    build: ./samba_api
-    ports:
-      - "8000:8000"
-    restart: always
-    depends_on:
-      - db
+  # samba-api:
+  #   build: ./samba_api
+  #   ports:
+  #     - "8000:8000"
+  #   restart: always
+  #   depends_on:
+  #     - db
 
-    volumes:
-      - ./samba_api:/app
-    networks:
-      - samba-net
+  #   volumes:
+  #     - ./samba_api:/app
+  #   networks:
+  #     - samba-net
 
 networks:
   samba-net:
